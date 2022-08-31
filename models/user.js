@@ -41,4 +41,9 @@ User.beforeCreate(async (user) => {
   user.password = await bcrypt.hash(user.password, 10);
 });
 
+User.prototype.validatePassword = function (rawPassword) {
+  console.log("this user password: ", this.password);
+  return bcrypt.compare(rawPassword, this.password);
+};
+
 module.exports = User;
