@@ -1,4 +1,4 @@
-const databaseConnection = require("../config/sequelizeConnection");
+const sequelizeConnection = require("../config/sequelizeConnection");
 
 const { User, Post, Comment } = require("../models");
 
